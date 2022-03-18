@@ -1,0 +1,30 @@
+.stripe-02 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+
+    .col {
+        width: 50%;
+
+        img {
+            display: block;
+            height: auto;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    @media (min-width: $screen-md-min) {
+        padding: 35px 0;
+
+        .col {
+            width: 25%;
+        }
+    }
+
+    @media (min-width: $screen-lg-min) {
+        padding: 50px 0;
+    }
+}
