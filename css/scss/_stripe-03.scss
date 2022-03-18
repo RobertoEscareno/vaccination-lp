@@ -1,0 +1,46 @@
+.stripe-03 {
+    padding: 25px 0;
+
+    h2 {
+        margin-bottom: 25px;
+    }
+
+    .narrative p {
+        margin-bottom: 50px;
+    }
+
+    .benefits {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .benefit-item {
+            padding: 20px;
+            border: 1px solid $border;
+            border-radius: 5px;
+            margin: 10px;
+
+            .title {
+                margin: 10px 0;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (min-width: $screen-md-min) {
+        padding: 50px 0;
+
+        .narrative {
+            h2,
+            p {
+                max-width: 450px;
+            }
+        }
+
+        .benefits {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}

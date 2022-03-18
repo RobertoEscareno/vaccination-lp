@@ -1,0 +1,183 @@
+.stripes {
+
+    .stripe-01 {
+        position: relative;
+        padding: 20px 0;
+
+        h1 {
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+        .icons {
+            display: flex;
+            margin-bottom: 100px;
+
+            .icon-item {
+                display: flex;
+                width: 45%;
+                align-items: center;
+
+                span {
+                    margin-left: 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .schedule-wrapper {
+            z-index: 10;
+
+            .title {
+                display: flex;
+                width: 100%;
+                align-items: center;
+
+                span {
+                    margin-left: 10px;
+                }
+            }
+
+            .schedule-box {
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 10px;
+                box-shadow: 0 5px 10px -5px #005acc;
+
+                .col {
+                    display: flex;
+                    width: 100%;
+                    margin-bottom: 15px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .title,
+                    select {
+                        width: 50%;
+                    }
+
+                    select {
+                        background-color: transparent;
+                        font-weight: 600;
+                        font-size: 14px;
+                    }
+
+                    .title {
+
+                        span {
+                            color: $text;
+                        }
+                    }
+
+                    &.btn-container {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        .image-wrapper {
+            position: relative;
+
+            img {
+                display: none;
+            }
+        }
+
+        @media (min-width: $screen-md-min) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            h1,
+            p,
+            .icons {
+                max-width: 350px;
+            }
+
+            .schedule-wrapper {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                width: 90%;
+
+                .schedule-box {
+                    display: grid;
+                    grid-template-columns: 3fr 3fr 3fr 2fr;
+
+                    .col {
+                        margin-bottom: 0;
+                        flex-direction: column;
+
+                        .title {
+                            width: 100%;
+                        }
+
+                        select {
+                            width: 80%;
+                            margin: 0 10%;
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            .image-wrapper {
+                height: 500px;
+            }
+        }
+
+        @media (min-width: $screen-lg-min) {
+            padding: 25px 0;
+            grid-template-columns: 1fr 1fr;
+
+            .schedule-wrapper {
+                width: 80%;
+                bottom: 25px;
+
+                .schedule-box {
+                    grid-template-columns: 3fr 3fr 3fr 1fr;
+                    padding: 25px;
+                    margin-top: 20px;
+                }
+            }
+
+            .image-wrapper {
+
+                img {
+                    display: block;
+                    position: absolute;
+                    bottom: -20px;
+                    right: -50px;
+                    z-index: -1;
+                }
+            }
+        }
+
+        @media (min-width: $screen-xl-min) {
+            grid-template-columns: 3fr 4fr;
+
+            .schedule-wrapper {
+                width: 75%;
+
+                .schedule-box {
+                    grid-template-columns: 3fr 3fr 3fr 1fr;
+                }
+            }
+
+            .image-wrapper {
+
+                img {
+                    bottom: -25px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+
+    .header-wrapper {
+        display: grid;
+        max-width: $screen-xl-min;
+        margin: 0 auto;
+        grid-template-rows: 1fr auto;
+
+        .logo-wrapper {
+            padding: 20px 20px 0;
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .nav-wrapper {
+            padding: 20px;
+
+            nav {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            a {
+                display: inline-block;
+                padding: 10px;
+                font-size: 14px;
+                font-weight: 600;
+
+                &.-active {
+                    background-color: $accent;
+                    color: $white;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        @media (min-width: $screen-md-min) {
+            grid-template-rows: 100px;
+            grid-template-columns: 1fr 2fr;
+            padding: 0 25px;
+
+            .logo-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 0;
+
+                img {
+                    margin: 0;
+                }
+            }
+
+            .nav-wrapper {
+                padding: 0;
+
+                nav {
+                    height: 100%;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    a {
+                        padding: 10px 15px;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: $screen-lg-min) {
+
+            .nav-wrapper {
+
+                nav {
+
+                    a {
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: $screen-xl-min) {
+
+            .nav-wrapper {
+
+                nav {
+
+                    a {
+                        font-size: 16px;
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}
